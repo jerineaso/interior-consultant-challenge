@@ -7,8 +7,9 @@ body {
 }
 
 nav {
-  width: 90%;
+  max-width: 1250px;
   min-height: 100px;
+  padding: 2rem;
   margin: 0 auto;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -31,26 +32,30 @@ nav .logo {
   padding: 7px;
 }
 
-nav ul {
+nav .navi {
+  position: relative;
+}
+
+nav .navi ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   list-style: none;
 }
 
-nav ul .active a {
+nav .navi ul .active a {
   font-weight: 700;
 }
 
-nav ul li {
+nav .navi ul li {
   padding-right: 86px;
 }
 
-nav ul li:nth-child(4) {
+nav .navi ul li:nth-child(4) {
   padding-right: 0;
 }
 
-nav ul li a {
+nav .navi ul li a {
   font-family: Montserrat;
   font-size: 18px;
   text-decoration: none;
@@ -58,29 +63,30 @@ nav ul li a {
   color: #fff;
 }
 
+nav .hidden {
+  display: none;
+}
+
 main {
-  padding: 60px;
+  max-width: 1250px;
+  padding: 2rem;
+  margin: 0 auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  min-height: 100vh;
-  overflow: hidden;
 }
 
 main .left {
-  width: 45%;
+  width: 40%;
   height: 587px;
 }
 
 main .left .title {
   font-family: Lora;
-  font-size: 48px;
+  font-size: 3rem;
   color: #fff;
   font-weight: 400;
 }
@@ -89,9 +95,8 @@ main .left .title-desc p {
   font-family: Montserrat;
   font-style: normal;
   font-weight: 300;
-  font-size: 24px;
+  font-size: 1.5rem;
   color: #fff;
-  max-width: 75%;
 }
 
 main .left .title-desc a {
@@ -100,20 +105,148 @@ main .left .title-desc a {
   font-weight: 600;
   font-size: 18px;
   text-decoration: none;
+  padding-right: 10px;
 }
 
-main .left .title-desc a .fas {
+main .left .title-desc a .fa-long-arrow-right {
   color: #fff;
 }
 
 main .right {
   width: 55%;
-  height: 587px;
   position: relative;
 }
 
 main .right img {
   width: 100%;
-  height: auto;
+  display: block;
+}
+
+main .right .card {
+  position: absolute;
+  bottom: 0%;
+  right: 20px;
+  width: 410px;
+  background-color: #181719;
+  padding: 10px;
+  -webkit-box-shadow: 0 1rem 1.5rem rgba(0, 0, 0, 0.6);
+          box-shadow: 0 1rem 1.5rem rgba(0, 0, 0, 0.6);
+}
+
+main .right .card .card-details {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+main .right .card .card-details img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+}
+
+main .right .card .card-details .card-detail {
+  margin-left: 20px;
+}
+
+main .right .card .card-details .card-detail h1 {
+  font-family: Montserrat;
+  font-weight: 500;
+  font-size: 14px;
+  color: #FFFFFF;
+}
+
+main .right .card .card-details .card-detail h2 {
+  font-family: Montserrat;
+  font-weight: 500;
+  font-size: 12px;
+  color: #828282;
+}
+
+main .right .card p {
+  font-family: Lora;
+  font-weight: bold;
+  font-size: 24px;
+  color: #FFFFFF;
+  max-width: 60%;
+}
+
+footer {
+  margin-top: 70px;
+}
+
+footer p {
+  font-family: Montserrat;
+  font-weight: 600;
+  font-size: 14px;
+  color: #A9A9A9;
+  text-align: center;
+}
+
+@media (max-width: 910px) {
+  nav {
+    padding: 0 2rem;
+  }
+  nav .navi .links {
+    display: none;
+  }
+  nav .navi .links.cross {
+    position: fixed;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #181719;
+    z-index: 20;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 0;
+    margin: 0;
+  }
+  nav .navi .links.cross li {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding: 25px 0;
+    margin-top: 80px;
+  }
+  nav .hidden {
+    display: block;
+    color: #fff;
+  }
+  main {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 40px;
+    margin-bottom: 20px;
+  }
+  main .left {
+    width: 100%;
+    height: 250px;
+  }
+  main .left .title-desc p {
+    font-size: 20px;
+  }
+  main .right {
+    width: 100%;
+  }
+  main .right .card {
+    bottom: -15%;
+    right: 35px;
+    width: 320px;
+  }
+  main .right .card p {
+    font-size: 18px;
+  }
 }
 /*# sourceMappingURL=style.css.map */
