@@ -81,7 +81,6 @@ main {
 
 main .left {
   width: 40%;
-  height: 587px;
 }
 
 main .left .title {
@@ -124,11 +123,11 @@ main .right img {
 
 main .right .card {
   position: absolute;
-  bottom: 0%;
+  bottom: -16%;
   right: 20px;
-  width: 410px;
+  width: 390px;
   background-color: #181719;
-  padding: 10px;
+  padding: 20px;
   -webkit-box-shadow: 0 1rem 1.5rem rgba(0, 0, 0, 0.6);
           box-shadow: 0 1rem 1.5rem rgba(0, 0, 0, 0.6);
 }
@@ -169,6 +168,7 @@ main .right .card p {
   font-size: 24px;
   color: #FFFFFF;
   max-width: 60%;
+  margin: 15px 0 0 0;
 }
 
 footer {
@@ -183,7 +183,7 @@ footer p {
   text-align: center;
 }
 
-@media (max-width: 910px) {
+@media (max-width: 966px) {
   nav {
     padding: 0 2rem;
   }
@@ -221,18 +221,18 @@ footer p {
   nav .hidden {
     display: block;
     color: #fff;
+    z-index: 22;
   }
   main {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
     padding: 40px;
     margin-bottom: 20px;
   }
   main .left {
     width: 100%;
     height: 250px;
+  }
+  main .left .title {
+    font-size: 2.7rem;
   }
   main .left .title-desc p {
     font-size: 20px;
@@ -241,12 +241,35 @@ footer p {
     width: 100%;
   }
   main .right .card {
-    bottom: -15%;
     right: 35px;
-    width: 320px;
+    width: 260px;
+    bottom: -25%;
   }
   main .right .card p {
     font-size: 18px;
+  }
+}
+
+@media (max-width: 768px) {
+  main {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  main .right .card {
+    bottom: -15%;
+    width: 54%;
+  }
+}
+
+@media (max-width: 537px) {
+  main .right .card {
+    width: 60%;
+  }
+  main .right .card p {
+    margin: 12px 0 0 0;
+    max-width: 70%;
   }
 }
 /*# sourceMappingURL=style.css.map */
